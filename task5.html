@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      *{
+        margin: 0%;
+        padding: 0%;
+      }
+      input:focus{
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- form section starts  -->
+    <section class="container-form d-flex justify-content-center align-items-center vh-100">
+      <form class="form-content px-3 py-4 d-flex flex-column gap-3" style="background-color: #7070702c; width: 600px;">
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="fname" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">First Name</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-user px-2" style="color: #000;"></i>
+            <input type="text" name="fname" id="fname" required placeholder="First Name" class="ps-3 py-1" style=" width:100%; border: none;">
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="lname" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">Last Name</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-user px-2" style="color: #000;"></i>
+            <input type="text" name="lname" id="lname" required placeholder="Last Name" class="ps-3 py-1" style=" width:100%; border: none;">
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="email" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">Email</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-envelope px-2" style="color: #000;"></i>
+            <input type="email" name="email" id="email" required placeholder="Email Address" class="ps-3 py-1" style=" width:100%; border: none;">
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="phnum" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">Phone #</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-phone px-2" style="color: #000;"></i>
+            <input type="number" name="email" id="email" required placeholder="(845) 555-1212" class="ps-3 py-1" style=" width:100%; border: none;">
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="address" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">Address</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-home px-2" style="color: #000;"></i>
+            <input type="text" name="address" id="address" required placeholder="Address" class="ps-3 py-1" style=" width:100%; border: none;">
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="city" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">City</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-home px-2" style="color: #000;"></i>
+            <input type="text" name="city" id="city" required placeholder="City" class="ps-3 py-1" style=" width:100%; border: none;">
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="state" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">State</label>
+          <div class="border border-secondary d-flex align-items-center justify-content-center" style="width: 70%;">
+            <i class="fa-solid fa-bars-staggered px-2" style="color: #000;"></i>
+            <select name="state" id="state" class="ps-3 py-1" style=" width:100%; border: none;">
+              <option value="delhi">Delhi</option>
+              <option value="karnataka">Karnataka</option>
+              <option value="tamilnadu">Tamil Nadu</option>
+            </select>
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="hosting" class=" d-flex justify-content-end fw-semibold" style="width: 35%;">Do you have hosting?</label>
+          <div class="d-flex flex-column align-items-start" style="width: 80%;">
+            <div>
+              <input type="radio" name="yes" id="hosting"><span>Yes</span>
+            </div>
+            <div>
+              <input type="radio" name="no" id="hosting"><span>No</span>
+            </div>
+          </div>
+        </div>
+        <div class= "d-flex justify-content-start gap-4" style="width: 100%;">
+          <label for="projectdec" class=" d-flex justify-content-end fw-semibold" style="width: 30%;">Project Description</label>
+          <div class="border border-secondary d-flex align-items-center" style="width: 70%;">
+            <i class="fa-solid fa-pencil px-2" style="color: #000;"></i>
+            <textarea name="projectdec" id="projectdec" rows="2" style="width: 100%; border: none; outline: none;"></textarea>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="bg-warning px-2 rounded">
+            <button type="submit" class="border border-0 pe-1 bg-warning fw-semibold fs-5">Send</button>
+            <span>
+              <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- from section ends  -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

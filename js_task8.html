@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-content{
+            max-width: 600px;
+            width: 100%;
+            padding: 3vh 2vw;
+            box-sizing: border-box;
+            background-color: #ed64ec;
+            background-image: linear-gradient(0deg, #ed64ec 0%, #dee197 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .container h1{
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .label-control label{
+            width: 130px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .input-control input, .input-control textarea, #country{
+            width: 20vw;
+        }
+        .gender, .language{
+            width: 20px !important;
+        }
+        .input-control textarea{
+            resize: none;
+        }
+        .input-control span{
+            margin-left: 1vw;
+            color: red;
+        }
+        .website{
+            position: relative;
+            left: 53%;
+        }
+        .submit{
+            width: 150px;
+            margin: auto;
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-content">
+            <h1>Registration Form</h2>
+            <form action="#"onsubmit="checkValidation()">
+                <div class="row">
+                    <div class="label-control">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" name="fname" id="fname">
+                        <span id="fnameFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" name="lname" id="lname">
+                        <span id="lnameFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="email" name="email" id="email">
+                        <span id="emailFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="password" name="password" id="password">
+                        <span id="passwordFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="rePassword">Re-enter Password</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="password" name="rePassword" id="rePassword">
+                        <span id="rePasswordFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="radio" name="male" id="male-gender" class="gender">Male <br>
+                        <input type="radio" name="female" id="female-gender" class="gender">Female
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="number" name="age" id="age">
+                        <span  id="ageFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="phnum">Phone Number</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="number" name="phnum" id="phnum">
+                        <span id="phnumFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="input-control">
+                        <textarea name="address" id="address" cols="10" rows="5"></textarea>
+                        <span id="addressFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="state">State</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" name="state" id="state">
+                        <span id="stateFail"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="input-control">
+                        <select name="country" id="country">
+                            <option value="none">Select your country</option>
+                            <option value="india">India</option>
+                            <option value="nepal">Nepal</option>
+                            <option value="srilanka">Srilanka</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label-control">
+                        <label for="language">Languages Known</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="checkbox" name="english" id="eng-language" class="language">English
+                        <input type="checkbox" name="kannada" id="kan-language" class="language">Kannada
+                        <input type="checkbox" name="hindi" id="hin-language" class="language">Hindi
+                        <input type="checkbox" name="telugu" id="tel-language" class="language">Telugu
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="checkbox" name="agree" id="agree"> 
+                    <Span>Hereby I declare all the given details are true</Span>
+                </div>
+                <div class="row">
+                    <p class="website">
+                        Log in to <a href="#">Ethnus</a> website
+                    </p>
+                </div>
+                <div class="row">
+                    <button class="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function checkValidation(){
+            const fname = document.getElementById('fname').value;
+            const fnameFail = document.getElementById('fnameFail');
+            if(fname == ''){
+                fnameFail.innerHTML = "POOR";
+            }
+            else{
+                fnameFail.innerHTML = "fname";
+            }
+
+            const lname = document.getElementById('lname').value;
+            const lnameFail = document.getElementById('lnameFail');
+            if(lname == ''){
+                lnameFail.innerHTML = "POOR";
+            }
+            else{
+                lnameFail.innerHTML = "lname";
+            }
+
+            const email = document.getElementById('email').value;
+            const emailFail = document.getElementById('emailFail');
+            if(email == ''){
+                emailFail.innerHTML = "POOR";
+            }
+            else{
+                emailFail.innerHTML = "email";
+            }
+            
+            const password = document.getElementById('password').value;
+            const passwordFail = document.getElementById('passwordFail');
+            if(password == ''){
+               passwordFail.innerHTML = "POOR";
+            }
+            else if(password.length < 5){
+                passwordFail.innerHTML = "POOR";
+            }
+            else{
+                passwordFail.innerHTML = "password";
+            }
+
+            const rePassword = document.getElementById('rePassword').value;
+            const rePasswordFail = document.getElementById('rePasswordFail');
+            if(rePassword != password){
+               rePasswordFail.innerHTML = "POOR OR MISMATCH";
+            }
+            else{
+                rePasswordFail.innerHTML = "";
+            }
+            
+            const age = document.getElementById('age').value;
+            const ageFail = document.getElementById('ageFail');
+            if(age == ''){
+                ageFail.innerHTML = "POOR";
+            }
+            else{
+                ageFail.innerHTML = "";
+            }
+            
+            const phnum = document.getElementById('phnum').value;
+            const phnumFail = document.getElementById('phnumFail');
+            if(phnum == ''){
+                phnumFail.innerHTML = "POOR";
+            }
+            else{
+                phnumFail.innerHTML = "";
+            }
+            
+            const address = document.getElementById('address').value;
+            const addressFail = document.getElementById('addressFail');
+            if(address == ''){
+                addressFail.innerHTML = "POOR";
+            }
+            else{
+                addressFail.innerHTML = "";
+            }
+            
+            const state = document.getElementById('state').value;
+            const stateFail = document.getElementById('stateFail');
+            if(state == ''){
+                stateFail.innerHTML = "POOR";
+            }
+            else{
+                stateFail.innerHTML = "";
+            }
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(227, 239, 250);
+}
+h1{
+    text-align: center;
+    margin: 12px;
+    font-family: 'Indie Flower', cursive;
+    padding: 12px;
+}
+table{
+    margin: auto;
+    padding: 12px;
+    border-collapse: collapse;
+}
+table tr td,th{
+    border: 2px solid black;
+    padding: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+table tr td:hover{
+    font-size: 16.1px;
+    background-color: rgb(214, 232, 237);
+    /* cursor: pointer; */
+}
+h3{
+    margin-top: 30px;
+    margin-left: 12px;
+    font-family: 'Indie Flower', cursive;
+}
+.connect{
+    margin-top: 20px;
+    /* border: 2px solid black; */
+    display: flex;
+    
+    /* flex-direction: column; */
+}
+
+.connect img{
+    /* display: flex; */
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.connect img:hover{
+    width: 41.2px;
+    height: 41.2px;
+
+}
+
+.footer{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    bottom: 0px;
+}
